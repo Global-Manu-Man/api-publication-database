@@ -167,12 +167,8 @@ INSERT INTO `services_offered` (`services_offered_id`, `services_offered`) VALUE
 --
 
 CREATE TABLE `parking` (
-  `parking_id` int(11) NOT NULL AUTO_INCREMENT,
-  `garage` tinyint(1) NOT NULL,
-  `lot` tinyint(1) NOT NULL,
-  `street` tinyint(1) NOT NULL,
-  `valet` tinyint(1) NOT NULL,
-  `validated` tinyint(1) NOT NULL,
+  `parking_id` varchar(10) NOT NULL,
+  `parking_name` varchar(40) NOT NULL,
   PRIMARY KEY (`parking_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
