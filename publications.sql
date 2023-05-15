@@ -147,9 +147,12 @@ INSERT INTO `security_elements` (`security_elements_id`, `security_element`) VAL
 --
 
 CREATE TABLE `services_offered` (
-  `services_offered_id` varchar(10) NOT NULL,
-  `services_offered` varchar(255) NOT NULL
+  `services_offered_id` varchar(255) NOT NULL,
+  `service_name` varchar(40) NOT NULL,
+  `is_offered` tinyint(1) NOT NULL,
+  PRIMARY KEY (`services_offered_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 
 --
 -- Dumping data for table `services_offered`
@@ -159,6 +162,26 @@ INSERT INTO `services_offered` (`services_offered_id`, `services_offered`) VALUE
 ('1bffe92c-f', 'Food,Beverage,Live Music'),
 ('de5a9487-d', 'Food,Beverage,Live Music');
 
+--
+-- Table structure for table `parking`
+--
+
+CREATE TABLE `parking` (
+  `parking_id` int(11) NOT NULL AUTO_INCREMENT,
+  `garage` tinyint(1) NOT NULL,
+  `lot` tinyint(1) NOT NULL,
+  `street` tinyint(1) NOT NULL,
+  `valet` tinyint(1) NOT NULL,
+  `validated` tinyint(1) NOT NULL,
+  PRIMARY KEY (`parking_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `parking`
+--
+INSERT INTO `parking` (`garage`, `lot`, `street`, `valet`, `validated`) VALUES(0, 0, 0, 1, 0);
+INSERT INTO `parking` (`garage`, `lot`, `street`, `valet`, `validated`) VALUES(1, 0, 1, 0, 1);
+INSERT INTO `parking` (`garage`, `lot`, `street`, `valet`, `validated`) VALUES(0, 1, 0, 1, 0);
 -- --------------------------------------------------------
 
 --
