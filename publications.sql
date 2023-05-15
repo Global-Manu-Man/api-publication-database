@@ -179,12 +179,11 @@ CREATE TABLE `parking` (
 --
 -- Dumping data for table `parking`
 --
-INSERT INTO `parking` (`parking_id`, `garage`, `lot`, `street`, `valet`, `validated`) VALUES (1, 'false', 'false', 'false', 'true', 'false');
-
-INSERT INTO `parking` (`parking_id`, `garage`, `lot`, `street`, `valet`, `validated`) VALUES (2, 'true', 'false', 'false', 'false', 'true');
-
-INSERT INTO `parking` (`parking_id`, `garage`, `lot`, `street`, `valet`, `validated`) VALUES (3, 'false', 'true', 'false', 'true', 'false');
-
+INSERT INTO `parking` (`parking_id`, `parking_name`) VALUES (1, 'garage');
+INSERT INTO `parking` (`parking_id`, `parking_name`) VALUES (2, 'lot');
+INSERT INTO `parking` (`parking_id`, `parking_name`) VALUES (3, 'street');
+INSERT INTO `parking` (`parking_id`, `parking_name`) VALUES (4, 'valet');
+INSERT INTO `parking` (`parking_id`, `parking_name`) VALUES (5, 'validated');
 -- --------------------------------------------------------
 
 --
