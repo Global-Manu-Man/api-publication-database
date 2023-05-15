@@ -53,6 +53,8 @@ CREATE TABLE `business` (
   `publication_likes` int(2) DEFAULT NULL,
   `questions` varchar(50) DEFAULT NULL,
   `policies_terms` longblob DEFAULT NULL,
+  `accepts_credit_cards` varchar(5) NOT NULL,
+  `is_owner_verified` tinyint(1) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `start_date` timestamp NOT NULL DEFAULT current_timestamp(),
   `end_date` timestamp NOT NULL DEFAULT current_timestamp()
